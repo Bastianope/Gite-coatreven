@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gîte du Trégor – Perros-Guirec, Bretagne</title>
+  <meta name="description" content="Maison indépendante avec spa et sauna à Coatréven, proche de Perros-Guirec. 2 chambres, 4 personnes, animaux acceptés. À partir de 60€/nuit.">
+  <meta property="og:title" content="Gîte du Trégor – Perros-Guirec">
+  <meta property="og:description" content="Maison bretonne avec spa & sauna, 4 pers., à partir de 60€/nuit.">
+  <meta property="og:image" content="https://img.leboncoin.fr/api/v1/lbcpb1/images/ae/a8/80/aea8804d6ba7e8e9c314a1c50174798f318c23b0.jpg?rule=ad-large">
+  <meta property="og:url" content="https://gite-coatreven.fr">
+
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+  <!-- Site CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ══ NAV ══ -->
+<nav>
+  <a class="nav-brand" href="#">Gîte du <span>Trégor</span></a>
+  <ul class="nav-links">
+    <li><a href="#logement">Le logement</a></li>
+    <li><a href="#calendrier">Disponibilités</a></li>
+    <li><a href="#alentours">Alentours</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="btn-admin" onclick="openLogin()">⚙ Propriétaires</button>
+    <a class="btn-reserve" href="#contact">Réserver</a>
+  </div>
+</nav>
+
+<!-- ══ HERO ══ -->
+<div class="hero">
+  <div class="hero-gallery">
+    <img class="main" src="https://img.leboncoin.fr/api/v1/lbcpb1/images/ae/a8/80/aea8804d6ba7e8e9c314a1c50174798f318c23b0.jpg?rule=ad-large" alt="Gîte du Trégor – vue principale">
+    <img src="https://img.leboncoin.fr/api/v1/lbcpb1/images/18/36/5a/18365a9d398ba4c112e63419b4f6154942ddc05f.jpg?rule=ad-large" alt="Intérieur">
+    <img src="https://img.leboncoin.fr/api/v1/lbcpb1/images/d0/74/d4/d074d42607d49432dc4c58aa08f9eb188b8a39e1.jpg?rule=ad-large" alt="Spa">
+  </div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="hero-tag">Coatréven · Côtes-d'Armor · Bretagne</span>
+    <h1>Maison en <em>Bretagne</em><br>avec spa &amp; sauna</h1>
+    <p class="hero-sub">Une maison indépendante tout confort à deux pas de la Côte de Granit Rose</p>
+    <div class="hero-badges">
+      <span class="badge">🛁 Spa &amp; Sauna</span>
+      <span class="badge">👨‍👩‍👧‍👦 4 personnes</span>
+      <span class="badge">🛏 2 chambres</span>
+      <span class="badge">🐾 Animaux bienvenus</span>
+      <span class="badge">🅿 Parking gratuit</span>
+      <span class="badge">🧹 Ménage inclus</span>
+    </div>
+  </div>
+</div>
+
+<!-- ══ GALLERY STRIP ══ -->
+<div class="gallery-strip">
+  <img src="https://img.leboncoin.fr/api/v1/lbcpb1/images/ae/a8/80/aea8804d6ba7e8e9c314a1c50174798f318c23b0.jpg?rule=ad-large" onclick="openLightbox(0)" alt="Photo 1">
+  <img src="https://img.leboncoin.fr/api/v1/lbcpb1/images/2b/83/ae/2b83ae8b60dff71fbf25d4c2f74bbe298ad45a12.jpg?rule=ad-large" onclick="openLightbox(1)" alt="Photo 2">
+  <img src="https://img.leboncoin.fr/api/v1/lbcpb1/images/18/36/5a/18365a9d398ba4c112e63419b4f6154942ddc05f.jpg?rule=ad-large" onclick="openLightbox(2)" alt="Photo 3">
+  <img src="https://img.leboncoin.fr/api/v1/lbcpb1/images/35/93/e3/3593e3530be976fbc72b545e126fb0f2093d137e.jpg?rule=ad-large" onclick="openLightbox(3)" alt="Photo 4">
+  <img src="https://img.leboncoin.fr/api/v1/lbcpb1/images/d0/74/d4/d074d42607d49432dc4c58aa08f9eb188b8a39e1.jpg?rule=ad-large" onclick="openLightbox(4)" alt="Photo 5">
+  <img src="https://img.leboncoin.fr/api/v1/lbcpb1/images/51/66/e7/5166e7f3d7917eb6640f18e0d45b01f70f91654f.jpg?rule=ad-large" onclick="openLightbox(5)" alt="Photo 6">
+  <img src="https://img.leboncoin.fr/api/v1/lbcpb1/images/09/69/17/0969178a9b5a6301ea3e154574000fc622ae4e71.jpg?rule=ad-large" onclick="openLightbox(6)" alt="Photo 7">
+  <img src="https://img.leboncoin.fr/api/v1/lbcpb1/images/f8/89/4c/f8894c538262bb1e4b8305b600feebe94f8802de.jpg?rule=ad-large" onclick="openLightbox(7)" alt="Photo 8">
+  <img src="https://img.leboncoin.fr/api/v1/lbcpb1/images/12/32/f8/1232f8fbf834df6d8d0d30ebf00b47b2af2192f6.jpg?rule=ad-large" onclick="openLightbox(8)" alt="Photo 9">
+  <img src="https://img.leboncoin.fr/api/v1/lbcpb1/images/84/df/6d/84df6d9c5293e288ba5f4c419cf646c55491d7a9.jpg?rule=ad-large" onclick="openLightbox(9)" alt="Photo 10">
+  <img src="https://img.leboncoin.fr/api/v1/lbcpb1/images/ac/48/51/ac48513ff6995d5020801c28acbd6834bcb33e38.jpg?rule=ad-large" onclick="openLightbox(10)" alt="Photo 11">
+  <img src="https://img.leboncoin.fr/api/v1/lbcpb1/images/7b/8f/50/7b8f50773f82690581a81ecfc980fe150c7b5496.jpg?rule=ad-large" onclick="openLightbox(11)" alt="Photo 12">
+</div>
+
+<!-- ══ LIGHTBOX ══ -->
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" onclick="closeLightbox()">×</button>
+  <button class="lb-nav lb-prev" onclick="lbNav(-1)">‹</button>
+  <img id="lbImg" src="" alt="">
+  <button class="lb-nav lb-next" onclick="lbNav(1)">›</button>
+  <div class="lb-counter" id="lbCounter"></div>
+</div>
+
+<!-- ══ LOGEMENT ══ -->
+<section id="logement">
+  <div class="section-wrap">
+    <div class="section-label">Le logement</div>
+    <h2>Une maison pour se ressourcer</h2>
+    <p style="font-family:sans-serif;color:var(--text-soft);max-width:680px;margin-bottom:2rem;font-size:0.95rem">
+      Maison indépendante proche de Perros-Guirec, idéale pour 4 personnes. Grande pièce de vie lumineuse, cuisine entièrement équipée, et un espace bien-être unique avec spa et sauna privatifs. Animaux acceptés, parking gratuit, ménage inclus.
+    </p>
+    <div class="features-grid">
+      <div class="feature-card"><div class="feat-icon">🛁</div><div><h3>Spa & Sauna privatifs</h3><p>Détente assurée après une journée de découvertes bretonnes</p></div></div>
+      <div class="feature-card"><div class="feat-icon">🍳</div><div><h3>Cuisine tout équipée</h3><p>Lave-vaisselle, four, micro-onde, plancha, cafetière expresso…</p></div></div>
+      <div class="feature-card"><div class="feat-icon">🌿</div><div><h3>Jardin privatif</h3><p>Espace extérieur calme pour profiter du doux été breton</p></div></div>
+      <div class="feature-card"><div class="feat-icon">🧺</div><div><h3>Ménage & linge inclus</h3><p>Draps, serviettes et ménage final compris dans le tarif</p></div></div>
+      <div class="feature-card"><div class="feat-icon">👕</div><div><h3>Buanderie</h3><p>Machine à laver, sèche-linge, fer à repasser à disposition</p></div></div>
+      <div class="feature-card"><div class="feat-icon">📺</div><div><h3>Télévision & Wi-Fi</h3><p>Connexion internet et divertissements inclus</p></div></div>
+      <div class="feature-card"><div class="feat-icon">🅿</div><div><h3>Parking gratuit</h3><p>Place de stationnement privée sur place</p></div></div>
+      <div class="feature-card"><div class="feat-icon">🐾</div><div><h3>Animaux acceptés</h3><p>Vos compagnons à quatre pattes sont les bienvenus</p></div></div>
+    </div>
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ══ CALENDRIER & TARIFS ══ -->
+<div class="cal-bg" id="calendrier">
+  <div class="section-wrap">
+    <div class="section-label">Disponibilités &amp; Tarifs</div>
+    <h2>Quand souhaitez-vous séjourner ?</h2>
+    <div class="cal-layout">
+
+      <!-- Calendrier -->
+      <div>
+        <div class="cal-header">
+          <button class="cal-nav-btn" onclick="prevMonth()">‹</button>
+          <span class="cal-month-title" id="calTitle"></span>
+          <button class="cal-nav-btn" onclick="nextMonth()">›</button>
+        </div>
+        <div class="cal-months" id="calMonths"></div>
+        <div class="cal-legend">
+          <div class="legend-item"><div class="legend-dot" style="background:#E1F5EE;border:1px solid #9FE1CB"></div> Disponible</div>
+          <div class="legend-item"><div class="legend-dot" style="background:#F5C4B3;border:1px solid #F0997B"></div> Réservé</div>
+          <div class="legend-item"><div class="legend-dot" style="background:#B4B2A9"></div> Passé</div>
+        </div>
+      </div>
+
+      <!-- Tarifs -->
+      <div>
+        <div class="prices-card">
+          <h3>💰 Nos tarifs</h3>
+          <div id="priceRows"></div>
+          <div class="price-note">
+            ℹ️ Minimum 2 nuits · Arrivée à partir de 14h<br>
+            Contactez-nous pour les séjours longue durée.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<hr class="section-divider">
+
+<!-- ══ ALENTOURS + CARTE ══ -->
+<section id="alentours">
+  <div class="section-wrap">
+    <div class="section-label">La région</div>
+    <h2>Les trésors du Trégor</h2>
+
+    <div class="poi-grid">
+      <div class="poi-card"><div class="poi-emoji">🏖</div><h3>Côte de Granit Rose</h3><p>Paysages uniques au monde, rochers roses façonnés par les vagues</p><span class="poi-dist">≈ 8 km</span></div>
+      <div class="poi-card"><div class="poi-emoji">⛵</div><h3>Perros-Guirec</h3><p>Port breton, restaurants, marché et sorties en mer</p><span class="poi-dist">≈ 10 km</span></div>
+      <div class="poi-card"><div class="poi-emoji">🐦</div><h3>Sept-Îles</h3><p>Réserve ornithologique – fous de Bassan, macareux, excursions en bateau</p><span class="poi-dist">≈ 15 km</span></div>
+      <div class="poi-card"><div class="poi-emoji">🏰</div><h3>Château de La Roche-Jagu</h3><p>Château médiéval du XVe s. surplombant le Trieux</p><span class="poi-dist">≈ 22 km</span></div>
+      <div class="poi-card"><div class="poi-emoji">🪨</div><h3>Ploumanach</h3><p>Village de pêcheurs niché dans les rochers roses, sentier des douaniers</p><span class="poi-dist">≈ 9 km</span></div>
+      <div class="poi-card"><div class="poi-emoji">⛪</div><h3>Tréguier</h3><p>Ville épiscopale médiévale, cathédrale Saint-Tugdual classée MH</p><span class="poi-dist">≈ 18 km</span></div>
+      <div class="poi-card"><div class="poi-emoji">🌊</div><h3>Plage de Trestraou</h3><p>Grande plage de sable fin, idéale pour familles et baigneurs</p><span class="poi-dist">≈ 12 km</span></div>
+      <div class="poi-card"><div class="poi-emoji">🌲</div><h3>Forêt de Beffou</h3><p>Randonnées, VTT et promenades en pleine nature</p><span class="poi-dist">≈ 14 km</span></div>
+    </div>
+
+    <!-- Carte Leaflet -->
+    <div id="map"></div>
+    <div class="map-legend">
+      <span>🏡 Gîte</span>
+      <span>🏖 Plages</span>
+      <span>⛵ Ports</span>
+      <span>🏰 Monuments</span>
+      <span>🌲 Nature</span>
+    </div>
+
+  </div>
+</section>
+
+<hr class="section-divider">
+
+<!-- ══ DISTANCES ══ -->
+<section>
+  <div class="section-wrap">
+    <div class="section-label">Comment nous rejoindre</div>
+    <h2>Villes à proximité</h2>
+    <table class="dist-table">
+      <thead>
+        <tr><th>Destination</th><th>Distance</th><th>Durée</th></tr>
+      </thead>
+      <tbody>
+        <tr><td><strong>Perros-Guirec</strong></td><td>10 km<div class="dist-bar"><div class="dist-bar-fill" style="width:6%"></div></div></td><td class="dist-time">~15 min</td></tr>
+        <tr><td><strong>Ploumanach</strong></td><td>9 km<div class="dist-bar"><div class="dist-bar-fill" style="width:5%"></div></div></td><td class="dist-time">~12 min</td></tr>
+        <tr><td><strong>Tréguier</strong></td><td>18 km<div class="dist-bar"><div class="dist-bar-fill" style="width:11%"></div></div></td><td class="dist-time">~22 min</td></tr>
+        <tr><td><strong>Lannion</strong></td><td>20 km<div class="dist-bar"><div class="dist-bar-fill" style="width:12%"></div></div></td><td class="dist-time">~25 min</td></tr>
+        <tr><td><strong>Paimpol</strong></td><td>35 km<div class="dist-bar"><div class="dist-bar-fill" style="width:21%"></div></div></td><td class="dist-time">~40 min</td></tr>
+        <tr><td><strong>Saint-Brieuc</strong></td><td>75 km<div class="dist-bar"><div class="dist-bar-fill" style="width:45%"></div></div></td><td class="dist-time">~1h</td></tr>
+        <tr><td><strong>Rennes</strong></td><td>175 km<div class="dist-bar"><div class="dist-bar-fill" style="width:100%"></div></div></td><td class="dist-time">~2h</td></tr>
+        <tr><td>✈️ Aéroport de Lannion</td><td>22 km<div class="dist-bar"><div class="dist-bar-fill" style="width:13%"></div></div></td><td class="dist-time">~25 min</td></tr>
+        <tr><td>🚆 Gare de Lannion</td><td>20 km<div class="dist-bar"><div class="dist-bar-fill" style="width:12%"></div></div></td><td class="dist-time">~25 min</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ══ FORMULAIRE ══ -->
+<div class="form-bg" id="contact">
+  <div class="section-wrap">
+    <div class="section-label">Demande de réservation</div>
+    <h2>Nous contacter</h2>
+    <p class="form-intro">Remplissez ce formulaire et nous vous répondrons rapidement pour confirmer votre séjour au Gîte du Trégor.</p>
+
+    <div id="contactForm">
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Prénom *</label>
+          <input type="text" id="f_prenom" placeholder="Marie">
+        </div>
+        <div class="form-group">
+          <label>Nom *</label>
+          <input type="text" id="f_nom" placeholder="Dupont">
+        </div>
+        <div class="form-group">
+          <label>Email *</label>
+          <input type="email" id="f_email" placeholder="marie@exemple.com">
+        </div>
+        <div class="form-group">
+          <label>Téléphone</label>
+          <input type="tel" id="f_tel" placeholder="06 xx xx xx xx">
+        </div>
+        <div class="form-group">
+          <label>Arrivée souhaitée *</label>
+          <input type="date" id="f_arrivee">
+        </div>
+        <div class="form-group">
+          <label>Départ souhaité *</label>
+          <input type="date" id="f_depart">
+        </div>
+        <div class="form-group">
+          <label>Nombre de personnes</label>
+          <select id="f_personnes">
+            <option value="1">1 personne</option>
+            <option value="2" selected>2 personnes</option>
+            <option value="3">3 personnes</option>
+            <option value="4">4 personnes</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Animaux ?</label>
+          <select id="f_animaux">
+            <option value="non">Non</option>
+            <option value="oui">Oui</option>
+          </select>
+        </div>
+        <div class="form-group full">
+          <label>Message ou questions</label>
+          <textarea id="f_message" placeholder="Dites-nous en plus sur votre séjour…"></textarea>
+        </div>
+      </div>
+      <div class="form-actions">
+        <button class="btn-submit" id="submitBtn" onclick="submitForm()">Envoyer ma demande →</button>
+        <span class="form-status" id="formStatus"></span>
+      </div>
+    </div>
+
+    <div class="form-success" id="formSuccess">
+      <div class="check">✉️</div>
+      <h3>Demande envoyée !</h3>
+      <p>Nous vous répondrons très prochainement pour confirmer votre séjour au Gîte du Trégor.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <p><strong style="color:rgba(255,255,255,0.7)">Gîte du Trégor</strong> · Coatréven, 22450 · Bretagne, France</p>
+  <p>À partir de 60€/nuit · 2 chambres · 4 personnes · Minimum 2 nuits</p>
+  <p style="margin-top:0.75rem"><a href="mailto:herve.peillet@orange.fr">herve.peillet@orange.fr</a></p>
+</footer>
+
+<!-- ══ LOGIN OVERLAY ══ -->
+<div class="overlay" id="loginOverlay">
+  <div class="login-box">
+    <h2>🔐 Espace propriétaires</h2>
+    <p>Accès réservé à la gestion du gîte</p>
+    <input type="password" id="loginPwd" placeholder="Mot de passe">
+    <button class="btn-login" onclick="doLogin()">Connexion</button>
+    <p class="login-error" id="loginError">Mot de passe incorrect</p>
+  </div>
+</div>
+
+<!-- ══ ADMIN OVERLAY ══ -->
+<div class="overlay" id="adminOverlay">
+  <div class="admin-panel">
+    <div class="admin-header">
+      <h2>⚙ Gestion du gîte</h2>
+      <button class="admin-close" onclick="closeAdmin()">×</button>
+    </div>
+
+    <!-- Réservations -->
+    <div class="admin-section">
+      <h3>📅 Périodes réservées</h3>
+      <div class="booking-list" id="adminBookingList"></div>
+      <div class="add-booking">
+        <input type="date" id="newStart" title="Début">
+        <input type="date" id="newEnd" title="Fin">
+        <input type="text" id="newNote" placeholder="Note (optionnel)" style="flex:1.5">
+        <button onclick="addBooking()">+ Ajouter</button>
+      </div>
+    </div>
+
+    <!-- Tarifs -->
+    <div class="admin-section">
+      <h3>💰 Tarifs</h3>
+      <div id="adminPriceRows"></div>
+    </div>
+
+    <!-- Demandes reçues -->
+    <div class="admin-section">
+      <h3>📩 Demandes reçues</h3>
+      <div class="contact-list" id="adminContacts"></div>
+    </div>
+
+    <div class="admin-footer">
+      <button class="btn-save" onclick="saveAdmin()">✓ Enregistrer</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══ SCRIPTS ══ -->
+<!-- Supabase -->
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+<!-- EmailJS -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<!-- App -->
+<script src="js/app.js"></script>
+
+</body>
+</html>
