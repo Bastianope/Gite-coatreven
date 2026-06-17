@@ -7,9 +7,9 @@ const CONFIG = {
   ADMIN_PWD: "Kermest",
   SUPABASE_URL: "https://ikiuywbosyvcvaaifxfo.supabase.co",
   SUPABASE_KEY: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImlraXV5d2Jvc3l2Y3ZhYWlmeGZvIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODE0ODUxMTMsImV4cCI6MjA5NzA2MTExM30.CWp26i_5xM9U0NZIcKkj9sf8iILId6v5v5xswUe_bOg",
-  EMAILJS_SERVICE: "",
-  EMAILJS_TEMPLATE: "",
-  EMAILJS_PUBLIC_KEY: "",
+EMAILJS_SERVICE: "service_b1oc8Ok",
+EMAILJS_TEMPLATE: "template_zz0n9ib",
+EMAILJS_PUBLIC_KEY: "Gp27H9TU7vwkSXeEz",
   OWNER_EMAIL: "herve.peillet@orange.fr",
 };
 
